@@ -1,0 +1,124 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.text{
+  color: #fcfdfe;
+  font-size: 30px;
+  font-family:  Roboto, sans-serif;
+  padding: 5px;
+}
+
+.topBar{
+  background-color: #34373e;
+}
+
+.container-flow{
+  margin-top: 50px;
+  padding: 20px;
+}
+
+body {
+  background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+.widget {
+  background: rgba(245, 245, 245, 0.05);
+  border: 2px solid #00293c;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.418);
+  position: left;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.details {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+.temperature {
+  color: #1e1f26;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.summary {
+  color: #102a49;
+  font-weight: 600;
+  width: 95%;
+  margin-top: -4px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #fcfdfe;
+}
+
+.summaryText {
+  margin: 0;
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+.wind {
+  color: #1e1f26;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.input {
+  width: 80%;
+  padding: 0px;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  color: #fcfdfe;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.line-box {
+  position: relative;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fcfdfe;
+  transition: ease .6s;
+} 
+  
+.input:focus + .line-box .line {
+  width: 100%;
+}
