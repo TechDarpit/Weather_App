@@ -2,7 +2,7 @@ const weatherApp = angular.module("weatherApp",[]);
 
 http:
 weatherApp.run(function($rootScope,$http){
-    $http.get("http://api.openweathermap.org/data/2.5/box/city?bbox=70,20,75,25,8&appid=fc03aceb65de04bdbba2db09025c42da")
+    $http.get("http://api.openweathermap.org/data/2.5/box/city?bbox=70,20,75,25,8&appid={Add Your Open Weather Map Api Key Here...}")
     .then(
         function(responce){
             $rootScope.weathers = responce.data.list;
